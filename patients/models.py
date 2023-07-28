@@ -11,7 +11,7 @@ class Patients(models.Model):
         ('Other','Other')
     )
     gender = models.CharField(choices = options,max_length = 100,default = "Other")
-    contact_number = models.IntegerField()
+    contact_number = models.CharField()
     address = models.CharField(max_length = 1000)
     medical_condition = models.CharField(max_length = 1000)
     profile_pic = models.ImageField(upload_to = "profile_pictures",null = True,blank = True)

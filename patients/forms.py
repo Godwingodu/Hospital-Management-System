@@ -33,7 +33,7 @@ class PatientsForm(forms.ModelForm):
         if not dob or dob > now().date():
             self.add_error('dob', 'Please provide a valid date of birth.')
 
-        if not contact_number or len(str(contact_number)) != 10:
+        if not contact_number or len(contact_number) != 10:
             self.add_error('contact_number', 'Contact number must be exactly 10 digits.')
 
         if not address or len(address.strip()) < 20:
